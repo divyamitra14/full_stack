@@ -1,0 +1,101 @@
+.d1{
+    background-color: #3b5998;
+    display: flex;
+    justify-content: space-between;
+    margin-top: -30px;
+    height: 150px;
+}
+
+.form1{
+
+    margin: 50px 50px 50px 50px;
+}
+.inner_form{
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+}
+.fb_logo{
+    font-size: xxx-large;
+    color: white;
+    margin: 50px 50px 50px 50px;
+}
+.email{
+    display: flex;
+    flex-direction: column;
+}
+.email_box{
+    background: #f5eab3;
+}
+.pass_box{
+    background: #f5eab3;
+}
+.pass{
+    display: flex;
+    flex-direction: column;
+}
+.login_b1{
+    height: 30px;
+    margin:18px;
+    font-weight: bolder;
+    color: white;
+    background: #4040aa;
+
+
+}
+.td_left{
+    margin-left: 12%;
+    font-size: larger;
+}
+.left_side{
+    margin-left: 8%;
+    margin-top: -450px;
+}
+.left_side1{
+    margin-left: 14%;
+}
+.sign{
+    margin-top: -410px;
+    text-transform: capitalize;
+}
+
+.sign_first{
+    height: 25px;
+
+}
+.sign_last{
+    height: 25px;
+}
+.sign_email{
+    width: 335px;
+    height: 25px;
+}
+.sign_Renter{
+    width: 335px;
+    height: 25px;
+}
+.sign_pass{
+    width: 335px;
+    height: 25px;
+}
+.sign_sentence{
+    font-size: larger;
+}
+.dob_d{
+    margin-left:-30%;
+}
+.para_dob{
+    color: #3b5998;
+}
+.gender{
+    font-size: larger;
+}
+.sign_up {
+    border: green;
+    color: white;
+    font-weight: bolder;
+    font-size: medium;
+    background: green;
+    width: 170px;
+    height: 40px;
+}

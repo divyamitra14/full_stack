@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--    <title>Image Change Based on Value</title>-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <TITLE> BMI</TITLE>
+    <style>
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        #result{
+            margin-top: 10px;
+            font-weight: bold;
+        }
+    </style>
+
+</head>
+<body>
+<center style="margin-top: 2%;margin-bottom: 2%">
+    <!--<h2>Enter a value to change the image:</h2>-->
+    <div class="card" style="width: 28rem;background: #eae5e5">
+        <div class="card-body" >
+            <h5 class="card-title" style="font-family: Bahnschrift;font-size: xx-large"><b>BMI CALCULATOR</b></h5>
+            <BR>
+            <img id="displayImage" src="DEFULT.png" style="width: 250px;height: 150px" alt="Default Image">
+            <BR><BR>
+            <lable style="margin-left: -65%">HEIGHT(CM):</lable>
+            <input TYPE="number" ID="h" class="form-control">
+            <br><br>
+            <label style="margin-left: -65%">WEIGHT(KG):</label>
+            <input TYPE="number" ID="w" class="form-control">
+            <br><br>
+            <button onclick="cal()" class="form-control" style="background: #0d6efd;width: 50%;color: white"> CALCULATE</button>
+            <br>
+            <div><b>Your BMI is : </b><span id="result">00</span></div>
+<!--            <div id="result"></div>-->
+        </div>
+    </div>
+</center>
+
+<script>
+    function cal(){
+        var h=parseFloat(document.getElementById("h").value)
+        var w=parseFloat(document.getElementById("w").value)
+        var image = document.getElementById("displayImage");
+        var bmi=w/((h/100)*(h/100))
+        var result = bmi.toFixed(2);
+
+        // document.getElementById('result').innerHTML= bmi.toFixed(2)
+        if (bmi <= 18) {
+            image.src = "under.png";
+            image.alt = "Under weight";
+            result += " (Underweight)";
+        } else if (bmi >18 && bmi < 24) {
+            image.src = "normal.png";
+            image.alt = " Normal Weight ";
+            result += " (Normal weight)";
+        } else if (bmi >=25 && bmi<=29 ) {
+            image.src = "over.png";
+            image.alt = "";
+            result += " (Overweight)";
+        } else if (bmi>29){
+            image.src = "obese.png"; // Default image if value is between 18 and 25
+            image.alt = "obese";
+            result += " (Obese)";
+        }
+        document.getElementById('result').innerHTML= result
+    }
+
+</script>
+
+</body>
+</html>
